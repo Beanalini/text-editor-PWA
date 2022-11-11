@@ -14,7 +14,7 @@
   
   ## Description
 
- The text editor application, JUTE (Just ANother Text Editor), developed in this project is a single-page application that meets PWA criteria.  The text editor application will run in your browser and is downloadable as a web application to your desktop/device. A number of data persistance techniques have been utilized ensuring user entered data is persistent and retrievable when a application is closed and opened respectively.  The application also functions off-line maintaining data retrieval and persistance.
+ The text editor application, JUTE (Just Another Text Editor), developed in this project is a single-page application that meets PWA criteria.  The text editor application will run in your browser and is downloadable as a web application to your desktop/device. A number of data persistance techniques have been utilized ensuring user entered data is persistent and retrievable when a application is closed and opened respectively.  The application also functions off-line maintaining data retrieval and persistance.
 
          
   ### Functional Requirements
@@ -86,7 +86,7 @@ Access the [deployed application](https://guarded-gorge-02512.herokuapp.com/) wh
 
    Click on the link below to view the walk through video which demonstrates the functionality of the social networking API.
 
-   - [link to the JUTE text editor](https://guarded-gorge-02512.herokuapp.com/)
+   - [Heroku Link to the JUTE text editor](https://guarded-gorge-02512.herokuapp.com/)
 
    
 
@@ -107,21 +107,21 @@ The screen shot below shows the Devtools being used to view the manifest file.
 The screen shot below shows the Devtools being used to view the registered service worker.
  ![](./assets/images/service-worker.png)
 
- The screen shot below shows content has been retrieved from storage and is displayed on the text editor.
- ![](./assets/images/local-memory.png)
+ The screen shot below shows content has been retrieved from storage and displayed in the text editor.
+
+ ![](./assets/images/local-memory-idb.png)
 
 The image below shows the pop-up window displayed when clicking on the download icon in the web browser address bar. 
 
  ![](./assets/images/installing-pwa.png)
 
- The image below shows the application down loaded as a  desktop icon 
+ The image below shows the application down loaded as a  desktop icon. 
 
  ![](./assets/images/installed-icon.png)
 
  The screen shot below shows the application operating as a standalone PWA. The header colour of the text editor  application changes to purple to distinguish as a standalone PWA, as opposed to running in the web browser.
 
  ![](./assets/images/desktop.png)
-
 
 
 
@@ -135,7 +135,7 @@ The image below shows the pop-up window displayed when clicking on the download 
   - IndexedDB
   - Node JS
   - Webpack
-  - 
+  
   
     
  
