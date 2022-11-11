@@ -3,15 +3,15 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add and configure workbox plugins for a service worker and manifest file.
-// TODO: Add CSS loaders and babel to webpack.
-
 module.exports = () => {
   return {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      database: './src/js/database.js',
+      editor: './src/js/editor.js',
+      header: './src/js/install.js',      
     },
     output: {
       filename: '[name].bundle.js',
@@ -23,20 +23,16 @@ module.exports = () => {
         template: './index.html',
         title: 'J.A.T.E'
       }),
-      //Inject custom service worker
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
-      }),
+          
       //create Manifest file
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
-        description: 'PWA Text Editor',
-        background_color: '#444444',
-        theme_color: '#444444',
+        description: 'Text Editor',
+        background_color: '#069420',
+        theme_color: '#4c3450',
         start_url: './',
         publicPath: './',
         icons: [
@@ -46,7 +42,12 @@ module.exports = () => {
             destination: path.join('assets', 'icons'),
           },
         ],
-      }),      
+      }),  
+       //Inject custom service worker
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),    
     ],
 
     module: {
